@@ -1,0 +1,95 @@
+.app-token-entry {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#app-token {
+  border: 1px transparent solid;
+  padding-right: 0px;
+  padding-top: 2px;
+  min-height: 22px;
+}
+
+.app-token-info {
+  position: absolute;
+  right: 0;
+  width: 22px;
+  height: 14px;
+  display: flex;
+}
+
+#app-token + .app-token-info > .icon {
+  background: red;
+  width: 100%;
+  -webkit-mask-image: var(--icon);
+  mask-image: var(--icon);
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  -webkit-mask-size: 16px;
+  mask-size: 16px;
+
+  background-color: var(--sdpi-color);
+}
+
+#app-token[data-state='info'] + .app-token-info > .icon {
+  --icon: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 496.304 496.303' xml:space='preserve' stroke='currentColor' fill='currentColor' %3E%3Cg%3E%3Cpath d='M248.146,0C111.314,0,0,111.321,0,248.152c0,136.829,111.314,248.151,248.146,248.151 c136.835,0,248.158-111.322,248.158-248.151C496.304,111.321,384.98,0,248.146,0z M248.146,472.093 c-123.473,0-223.935-100.459-223.935-223.941c0-123.479,100.462-223.941,223.935-223.941 c123.488,0,223.947,100.462,223.947,223.941C472.093,371.634,371.634,472.093,248.146,472.093z M319.536,383.42v32.852 c0,1.383-1.123,2.494-2.482,2.494H196.45c-1.374,0-2.482-1.117-2.482-2.494V383.42c0-1.372,1.114-2.482,2.482-2.482h34.744V205.831 h-35.101c-1.375,0-2.468-1.111-2.468-2.474v-33.6c0-1.38,1.1-2.479,2.468-2.479h82.293c1.371,0,2.482,1.105,2.482,2.479v211.181 h36.186C318.413,380.938,319.536,382.048,319.536,383.42z M209.93,105.927c0-20.895,16.929-37.829,37.829-37.829 c20.886,0,37.826,16.935,37.826,37.829s-16.94,37.829-37.826,37.829C226.853,143.756,209.93,126.822,209.93,105.927z' /%3E%3C/g%3E%3C/svg%3E");
+}
+
+#app-token[data-state='ok'] + .app-token-info > .icon {
+  --icon: url("data:image/svg+xml,%3Csvg width='497' height='497' viewBox='0 0 497 497' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_547_6)'%3E%3Cpath d='M248.146 0C111.314 0 0 111.321 0 248.152C0 384.981 111.314 496.303 248.146 496.303C384.981 496.303 496.304 384.981 496.304 248.152C496.304 111.321 384.98 0 248.146 0ZM248.146 472.093C124.673 472.093 24.211 371.634 24.211 248.152C24.211 124.673 124.673 24.211 248.146 24.211C371.634 24.211 472.093 124.673 472.093 248.152C472.093 371.634 371.634 472.093 248.146 472.093Z' fill='black' stroke='black'/%3E%3Cpath d='M204.155 364.327C205.114 365.286 206.691 365.295 207.667 364.319C265.626 306.36 328.973 244.944 386.994 186.923C387.964 185.953 387.959 184.389 386.992 183.422L355.423 151.853C354.457 150.887 352.905 150.886 351.931 151.861C304.738 199.054 255.861 246.186 205.215 296.659L144.813 236.257C143.843 235.287 142.279 235.292 141.311 236.259L109.742 267.828C108.776 268.794 108.776 270.346 109.75 271.32L204.155 364.327Z' fill='black' stroke='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_547_6'%3E%3Crect width='496.304' height='496.303' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+#app-token[data-state='loading'] + .app-token-info > .icon {
+  --icon: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='-2 -2 42 42' xmlns='http://www.w3.org/2000/svg' stroke='currentColor' %3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(1 1)' stroke-width='4'%3E%3Ccircle stroke-opacity='.5' cx='18' cy='18' r='18' /%3E%3Cpath d='M36 18c0-9.94-8.06-18-18-18'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 18 18' to='360 18 18' dur='1s' repeatCount='indefinite' /%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+#app-token[data-state='error'] + .app-token-info > .icon {
+  --icon: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 24 24' role='img' xmlns='http://www.w3.org/2000/svg' stroke='red' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none' color='%23000000' %3E%3Cpath d='M12 8L12 13' /%3E%3Cline x1='12' y1='16' x2='12' y2='16' /%3E%3Ccircle cx='12' cy='12' r='10' /%3E%3C/svg%3E");
+  background-color: red;
+}
+#app-token[data-state='error'] {
+  border: 1px solid red;
+}
+
+#app-token[data-state='ok'] + .app-token-info:hover > #app-token-info-box {
+  opacity: 1;
+}
+
+#app-token-info-box {
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  margin-top: 2px;
+  background-color: var(--sdpi-background);
+  border: 2px solid var(--sdpi-buttonbordercolor);
+  border-radius: 5px;
+  max-width: 300px;
+  max-height: 200px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  padding: 5px 10px;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+#app-token-info-box-image {
+  width: 280px;
+  min-height: 100px;
+  padding: 5px 0;
+  display: none;
+}
+#app-token-info-box-name {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  text-align: center;
+}
