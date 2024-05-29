@@ -11,7 +11,7 @@
       "Controllers": ["Keypad"],
       "States": [
         {
-          "Title": "Refresh\nGFX",
+          "Title": "Refresh\nApp",
           "Image": "imgs/actions/refresh/key",
           "TitleAlignment": "middle",
           "FontSize": 9
